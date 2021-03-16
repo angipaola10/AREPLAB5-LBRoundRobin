@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LBRoundRobin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body class="text-center text-white bg-dark" onload="client.getMessages()">
+    <div class="pricing-header px-4 py-4 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 text-info">Load Balancer Round Robin</h1>
+        <p class="lead">Taller de modularización con vitualización e introducción a Docker y AWS.</p>
+    </div>
+    <div class="row text-center justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control text-white bg-dark" placeholder="Type a message..." id="newMessage">
+                <button class="btn btn-info" type="button" onclick="client.postMessage(newMessage.value)">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center justify-content-center align-items-center overflow-auto mt-5 pt-5"
+        style="max-height: 60vh;">
+        <div class="col-md-5"  id="divmessages">
+        </div>
+    </div>
+
+    <script src="js/client.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
