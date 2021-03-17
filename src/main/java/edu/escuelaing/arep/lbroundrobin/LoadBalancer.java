@@ -5,8 +5,16 @@ import com.mashape.unirest.http.HttpResponse;
 
 import static spark.Spark.*;
 
-public class LoadBalancer 
+/**
+ * The main class of Load balancer Round Robin application.
+ */
+public class LoadBalancer
 {
+    /**
+     * The entry point of the Load Balancer application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         port(getPort());
         staticFileLocation("/");
@@ -29,6 +37,11 @@ public class LoadBalancer
 
     }
 
+    /**
+     * Gets port to running Load Balancer application.
+     *
+     * @return the port
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
